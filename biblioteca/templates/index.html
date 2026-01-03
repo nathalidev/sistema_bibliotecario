@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Bibliotecário</title>
+</head>
+<body>
+  <header>
+    <h1>
+        <img src="../static/images/icone_livros.png" alt="Logo da Biblioteca" width="70" height="70"/>
+
+        Bem-vindo ao Sistema Bibliotecário
+    </h1>
+
+    <nav>
+        <ul>
+            <li><a href="">Início</a></li>
+            <li><a href="">Cadastro de livros</a></li>
+            <li><a href="">Busca de livros</a></li>
+        </ul>
+
+  </header>
+
+  <main>
+    <form>
+        <fieldset>
+            <legend>Cadastro de livros</legend>
+
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" />
+
+            <br><br>
+
+            <label for="autor">Autor:</label>
+            <input type="text" id="autor" name="autor" />
+
+            <br><br>
+
+            <label for="ano">Ano de publicação:</label>
+            <input type="number" id="ano" name="ano" />
+
+            <br><br>
+
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero">
+                <option value="acao">Ação</option>
+                <option value="aventura">Aventura</option>
+                <option value="ficcao">Ficção</option>
+                <option value="ficcao_cientifica">Ficção Científica</option>
+                <option value="fantasia">Fantasia</option>
+                <option value="fantasia_urbana">Fantasia Urbana</option>
+                <option value="distopia">Distopia</option>
+                <option value="romance">Romance</option>
+                <option value="romance_contemporaneo">Romance Contemporâneo</option>
+                <option value="romance_historico">Romance Histórico</option>
+                <option value="romance_fantasia">Romance Fantástico</option>
+                <option value="drama">Drama</option>
+                <option value="suspense">Suspense</option>
+                <option value="thriller">Thriller</option>
+                <option value="misterio">Mistério</option>
+                <option value="policial">Policial</option>
+                <option value="terror">Terror</option>
+                <option value="horror_psicologico">Horror Psicológico</option>
+                <option value="biografia">Biografia</option>
+                <option value="autobiografia">Autobiografia</option>
+                <option value="memorias">Memórias</option>
+                <option value="historia">História</option>
+                <option value="historia_ficcional">Ficção Histórica</option>
+                <option value="filosofia">Filosofia</option>
+                <option value="sociologia">Sociologia</option>
+                <option value="politica">Política</option>
+                <option value="ciencia">Ciência</option>
+                <option value="divulgacao_cientifica">Divulgação Científica</option>
+                <option value="tecnologia">Tecnologia</option>
+                <option value="computacao">Computação</option>
+                <option value="inteligencia_artificial">Inteligência Artificial</option>
+                <option value="autoajuda">Autoajuda</option>
+                <option value="desenvolvimento_pessoal">Desenvolvimento Pessoal</option>
+                <option value="psicologia">Psicologia</option>
+                <option value="espiritualidade">Espiritualidade</option>
+                <option value="religioso">Religioso</option>
+                <option value="poesia">Poesia</option>
+                <option value="contos">Contos</option>
+                <option value="cronicas">Crônicas</option>
+                <option value="ensaios">Ensaios</option>
+                <option value="infantil">Infantil</option>
+                <option value="juvenil">Juvenil</option>
+                <option value="young_adult">Young Adult (YA)</option>
+                <option value="educacao">Educação</option>
+                <option value="didatico">Didático</option>
+                <option value="academico">Acadêmico</option>
+                <option value="negocios">Negócios</option>
+                <option value="empreendedorismo">Empreendedorismo</option>
+                <option value="economia">Economia</option>
+                <option value="financas">Finanças</option>
+                <option value="marketing">Marketing</option>
+                <option value="direito">Direito</option>
+                <option value="saude">Saúde</option>
+                <option value="medicina">Medicina</option>
+                <option value="gastronomia">Gastronomia</option>
+                <option value="culinaria">Culinária</option>
+                <option value="viagem">Viagem</option>
+                <option value="turismo">Turismo</option>
+                <option value="arte">Arte</option>
+                <option value="fotografia">Fotografia</option>
+                <option value="design">Design</option>
+                <option value="arquitetura">Arquitetura</option>
+                <option value="musica">Música</option>
+                <option value="cinema">Cinema</option>
+                <option value="quadrinhos">Quadrinhos</option>
+                <option value="graphic_novel">Graphic Novel<option>
+                <option value="manga">Mangá</option>
+                <option value="humor">Humor</option>
+                <option value="esportes">Esportes</option>
+                <option value="jogos">Jogos</option>
+                <option value="outros">Outros</option>
+            </select>
+
+            <br><br>
+
+            <label for="status_leitura">Status de leitura</label>
+            <select id="status_leitura" name="status_leitura">
+                <option value="leitura_em_andamento">Leitura em andamento</option>
+                <option value="nao_lido">Não Lido</option>
+                <option value="lido">Lido</option>
+            </select>
+
+            <br><br>
+
+            <button type="submit">Buscar</button>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>Busca de livros</legend>
+
+            <hr>
+
+            <input type="text" id="titulo_busca" name="titulo_busca" placeholder="Digite o título do livro" />
+
+            <button type="submit">Buscar</button>
+        </fieldset>
+    </form>
+  </main>
+
+  <footer></footer>
+</body>
+
+</html>
