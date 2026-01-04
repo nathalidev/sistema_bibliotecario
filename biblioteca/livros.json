@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "titulo": "Joyland",
+        "autor": "Stephen King",
+        "ano": 2013,
+        "genero": "ficcao",
+        "status": "leitura_em_andamento"
+    }
+]
