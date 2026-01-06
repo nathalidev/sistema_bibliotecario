@@ -29,6 +29,10 @@ def home():
     
     return render_template("index.html", ANO_ATUAL=ano_atual)
 
+@app.route("/cadastro")
+def cadastro():
+    return render_template("cadastro.html")
+
 
 
 @app.route("/api/livros", methods=["GET"])
