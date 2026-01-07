@@ -18,8 +18,9 @@
 
     <nav>
         <ul>
-            <li><a href="cadastro">Cadastro de livros</a></li>
-            <li><a href="">Busca de livros</a></li>
+            <li><a href="#livrosForm">Cadastro de livros</a></li>
+            <li><a href="#buscaForm">Busca de livros</a></li>
+            <li><a href="#livrosTable">Lista de livros</a></li>
         </ul>
 
   </header>
@@ -137,22 +138,126 @@
         </fieldset>
     </form>
 
-    <form>
+    <form id="buscaForm">
         <fieldset>
             <legend>Busca de livros</legend>
 
             <hr>
 
-            <input type="text" id="titulo_busca" name="titulo_busca" placeholder="Digite o título do livro" />
+            <label for="metodo_de_busca">Selecione o filtro da sua busca:</label>
+            <select id="metodo_de_busca" name="metodo_de_busca">
+                <option value=''>Selecione</option>
+                <option value="titulo">Título</option>
+                <option value="autor">Autor</option>
+                <option value="ano">Ano de publicação</option>
+                <option value="genero">Gênero</option>
+                <option value="status_leitura">Status de leitura</option>
+            </select>
 
-            <button type="submit">Buscar</button>
-            <button type="button" id="btnListarTodos">Listar Todos</button>
+            <!-- Linha flexível para campo de filtro e botão -->
+            <div id="filtro_linha" style="display: flex; gap: 8px; align-items: center; margin-top: 10px;">
+                <div id="campo_titulo" style="display:none;">
+                    <input type="text" id="titulo_busca" placeholder="Digite o Título..." />
+                </div>
+                <div id="campo_autor" style="display:none;">
+                    <input type="text" id="autor_busca" placeholder="Digite o Autor..." />
+                </div>
+                <div id="campo_ano" style="display:none;">
+                    <input type="number" id="ano_busca"  min="1900" max="{{ ANO_ATUAL }}" />
+                </div>
+                <div id="campo_genero" style="display:none;">
+                    <select id="genero_busca">
+                        <option value=''>Selecione</option>
+                        <option value="acao">Ação</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="ficcao">Ficção</option>
+                        <option value="ficcao_cientifica">Ficção Científica</option>
+                        <option value="fantasia">Fantasia</option>
+                        <option value="fantasia_urbana">Fantasia Urbana</option>
+                        <option value="distopia">Distopia</option>
+                        <option value="romance">Romance</option>
+                        <option value="romance_contemporaneo">Romance Contemporâneo</option>
+                        <option value="romance_historico">Romance Histórico</option>
+                        <option value="romance_fantasia">Romance Fantástico</option>
+                        <option value="drama">Drama</option>
+                        <option value="suspense">Suspense</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="misterio">Mistério</option>
+                        <option value="policial">Policial</option>
+                        <option value="terror">Terror</option>
+                        <option value="horror_psicologico">Horror Psicológico</option>
+                        <option value="biografia">Biografia</option>
+                        <option value="autobiografia">Autobiografia</option>
+                        <option value="memorias">Memórias</option>
+                        <option value="historia">História</option>
+                        <option value="historia_ficcional">Ficção Histórica</option>
+                        <option value="filosofia">Filosofia</option>
+                        <option value="sociologia">Sociologia</option>
+                        <option value="politica">Política</option>
+                        <option value="ciencia">Ciência</option>
+                        <option value="divulgacao_cientifica">Divulgação Científica</option>
+                        <option value="tecnologia">Tecnologia</option>
+                        <option value="computacao">Computação</option>
+                        <option value="inteligencia_artificial">Inteligência Artificial</option>
+                        <option value="autoajuda">Autoajuda</option>
+                        <option value="desenvolvimento_pessoal">Desenvolvimento Pessoal</option>
+                        <option value="psicologia">Psicologia</option>
+                        <option value="espiritualidade">Espiritualidade</option>
+                        <option value="religioso">Religioso</option>
+                        <option value="poesia">Poesia</option>
+                        <option value="contos">Contos</option>
+                        <option value="cronicas">Crônicas</option>
+                        <option value="ensaios">Ensaios</option>
+                        <option value="infantil">Infantil</option>
+                        <option value="juvenil">Juvenil</option>
+                        <option value="young_adult">Young Adult (YA)</option>
+                        <option value="educacao">Educação</option>
+                        <option value="didatico">Didático</option>
+                        <option value="academico">Acadêmico</option>
+                        <option value="negocios">Negócios</option>
+                        <option value="empreendedorismo">Empreendedorismo</option>
+                        <option value="economia">Economia</option>
+                        <option value="financas">Finanças</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="direito">Direito</option>
+                        <option value="saude">Saúde</option>
+                        <option value="medicina">Medicina</option>
+                        <option value="gastronomia">Gastronomia</option>
+                        <option value="culinaria">Culinária</option>
+                        <option value="viagem">Viagem</option>
+                        <option value="turismo">Turismo</option>
+                        <option value="arte">Arte</option>
+                        <option value="fotografia">Fotografia</option>
+                        <option value="design">Design</option>
+                        <option value="arquitetura">Arquitetura</option>
+                        <option value="musica">Música</option>
+                        <option value="cinema">Cinema</option>
+                        <option value="quadrinhos">Quadrinhos</option>
+                        <option value="graphic_novel">Graphic Novel</option>
+                        <option value="manga">Mangá</option>
+                        <option value="humor">Humor</option>
+                        <option value="esportes">Esportes</option>
+                        <option value="jogos">Jogos</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div id="campo_status" style="display:none;">
+                    <select id="status_busca">
+                        <option value="">Selecione o status</option>
+                        <option value="lido">Lido</option>
+                        <option value="leitura_em_andamento">Leitura em andamento</option>
+                        <option value="leitura_nao_iniciada">Leitura não iniciada</option>
+                        <option value="nao_lido">Não lido</option>
+                    </select>
+                </div>
+                <button type="button" id="btnListarTodos" style="display:none;">Listar Todos</button>
+            </div>
         </fieldset>
     </form>
     
     <fieldset>
         <legend>Lista de livros</legend>
-        <table border="1">
+        <table  id="livrosTable" border="1">
             <thead>
                 <tr>
                     <th>Título</th>
