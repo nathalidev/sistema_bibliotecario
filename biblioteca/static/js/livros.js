@@ -195,27 +195,64 @@ async function cadastrarLivro(evento) {
 async function buscarLivro(evento) {
     evento.preventDefault();
 
-    const filtro_busca = titulo_busca
+    const metodo = document.getElementById("metodo_de_busca").value;
+    
+    if (!metodo) {
+        alert("Selecione um filtro de busca!");
+        return;
+    }
 
-    if (!filtro_busca) {
-        alert("Não há filtros de busca aplicados!");
+    let valorBusca = "";
+    
+    if (metodo === "titulo") {
+        valorBusca = document.getElementById("titulo_busca").value.trim();
+    } else if (metodo === "autor") {
+        valorBusca = document.getElementById("autor_busca").value.trim();
+    } else if (metodo === "ano") {
+        valorBusca = document.getElementById("ano_busca").value.trim();
+    } else if (metodo === "genero") {
+        valorBusca = document.getElementById("genero_busca").value;
+    } else if (metodo === "status_leitura") {
+        valorBusca = document.getElementById("status_busca").value;
+    }
+
+    if (!valorBusca) {
+        alert("Preencha o campo de busca!");
         return;
     }
 
     try {
         const resposta = await fetch(API_URL);
         const livros = await resposta.json();
+        let livrosFiltrados = [];
 
-        // Filtrar livros que correspondem ao título
-        const livrosFiltrados = livros.filter(livro =>
-            livro.titulo.toLowerCase().includes(titulo.toLowerCase())
-        );
+        if (metodo === "titulo") {
+            livrosFiltrados = livros.filter(livro =>
+                livro.titulo.toLowerCase().includes(valorBusca.toLowerCase())
+            );
+        } else if (metodo === "autor") {
+            livrosFiltrados = livros.filter(livro =>
+                livro.autor.toLowerCase().includes(valorBusca.toLowerCase())
+            );
+        } else if (metodo === "ano") {
+            livrosFiltrados = livros.filter(livro =>
+                String(livro.ano) === valorBusca
+            );
+        } else if (metodo === "genero") {
+            livrosFiltrados = livros.filter(livro =>
+                livro.genero === valorBusca
+            );
+        } else if (metodo === "status_leitura") {
+            livrosFiltrados = livros.filter(livro =>
+                livro.status === valorBusca
+            );
+        }
 
         if (livrosFiltrados.length > 0) {
             atualizarTabela(livrosFiltrados);
         } else {
-            alert("Nenhum livro encontrado com esse título!");
-            carregarLivros(); // Recarregar todos os livros
+            alert("Nenhum livro encontrado com esse filtro!");
+            atualizarTabela([]);
         }
     } catch (erro) {
         alert("Erro ao buscar o livro!");
@@ -314,36 +351,42 @@ async function atualizarLivro(id, dados) {
 // Função para mostrar/esconder campos de filtro conforme método selecionado
 function atualizarCamposFiltro() {
     const metodo = document.getElementById("metodo_de_busca").value;
-    // Esconde todos os campos
+    // Esconde todos os campos e botões
     document.getElementById("campo_titulo").style.display = "none";
     document.getElementById("campo_autor").style.display = "none";
     document.getElementById("campo_ano").style.display = "none";
     document.getElementById("campo_genero").style.display = "none";
     document.getElementById("campo_status").style.display = "none";
+    document.getElementById("btnPesquisar").style.display = "none";
     document.getElementById("btnListarTodos").style.display = "none";
 
     valor_busca = ""; // Limpa o valor do campo de busca
 
-    // Mostra o campo correspondente e o botão se algum filtro for selecionado
+    // Mostra o campo correspondente e os botões se algum filtro for selecionado
     if (metodo === "titulo") {
         valor_busca = document.getElementById("titulo_busca").value.trim();
         document.getElementById("campo_titulo").style.display = "block";
+        document.getElementById("btnPesquisar").style.display = "inline-block";
         document.getElementById("btnListarTodos").style.display = "inline-block";
     } else if (metodo === "autor") {
         valor_busca = document.getElementById("autor_busca").value.trim();
         document.getElementById("campo_autor").style.display = "block";
+        document.getElementById("btnPesquisar").style.display = "inline-block";
         document.getElementById("btnListarTodos").style.display = "inline-block";
     } else if (metodo === "ano") {
         valor_busca = document.getElementById("ano_busca").value.trim();
         document.getElementById("campo_ano").style.display = "block";
+        document.getElementById("btnPesquisar").style.display = "inline-block";
         document.getElementById("btnListarTodos").style.display = "inline-block";
     } else if (metodo === "genero") {
         valor_busca = document.getElementById("genero_busca").value.trim();
         document.getElementById("campo_genero").style.display = "block";
+        document.getElementById("btnPesquisar").style.display = "inline-block";
         document.getElementById("btnListarTodos").style.display = "inline-block";
     } else if (metodo === "status_leitura") {
         valor_busca = document.getElementById("status_busca").value.trim();
         document.getElementById("campo_status").style.display = "block";
+        document.getElementById("btnPesquisar").style.display = "inline-block";
         document.getElementById("btnListarTodos").style.display = "inline-block";
     }
 
@@ -401,7 +444,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const selectMetodo = document.getElementById("metodo_de_busca");
     if (selectMetodo) {
         selectMetodo.addEventListener("change", atualizarCamposFiltro);
-        document.getElementById("btnListarTodos").style.display = "block";
         atualizarCamposFiltro(); // Chama uma vez para garantir que o campo inicial apareça
     }
 

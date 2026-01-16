@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "titulo": "Joyland",
+        "autor": "Stephen King",
+        "ano": 2013,
+        "genero": "suspense",
+        "status": "leitura_em_andamento"
+    },
+    {
+        "id": 2,
+        "titulo": "O iluminado",
+        "autor": "Stephen King",
+        "ano": 1977,
+        "genero": "horror_psicologico",
+        "status": "nao_lido"
+    },
+    {
+        "id": 3,
+        "titulo": "It a coisa",
+        "autor": "Stephen King",
+        "ano": 1986,
+        "genero": "terror",
+        "status": "leitura_nao_iniciada"
+    }
+]
