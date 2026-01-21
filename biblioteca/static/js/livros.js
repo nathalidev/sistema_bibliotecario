@@ -263,7 +263,38 @@ async function listarTodosLivros() {
     carregarLivros();
 }
 
-// ===== FUNÇÃO: Abrir diálogo de edição =====
+// ===== FUNÇÃO: Exportar livros para PDF =====
+async function exportarPDF() {
+    try {
+        const resposta = await fetch("/api/exportar-pdf");
+
+        if (resposta.ok) {
+            // Converter resposta em blob (arquivo)
+            const blob = await resposta.blob();
+            
+            // Criar um URL temporário para o arquivo
+            const url = window.URL.createObjectURL(blob);
+            
+            // Criar um link e simular clique para download
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'meus_livros.pdf';
+            document.body.appendChild(link);
+            link.click();
+            
+            // Limpar
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(url);
+            
+            alert("PDF baixado com sucesso!");
+        } else {
+            alert("Erro ao exportar PDF!");
+        }
+    } catch (erro) {
+        alert(`Erro ao exportar PDF!\n${erro.message}`);
+    }
+}
+
 async function abrirEdicao(id) {
     try {
         const resposta = await fetch(`${API_URL}/${id}`);
@@ -457,6 +488,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const btnListarTodos = document.getElementById("btnListarTodos");
     if (btnListarTodos) {
         btnListarTodos.addEventListener("click", carregarLivros);
+    }
+
+    // Adicionar evento ao botão "Exportar PDF"
+    const btnExportarPDF = document.getElementById("btnExportarPDF");
+    if (btnExportarPDF) {
+        btnExportarPDF.addEventListener("click", exportarPDF);
     }
 });
 
