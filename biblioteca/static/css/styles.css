@@ -1,0 +1,25 @@
+/* Inline: só para ajustes pontuais como um parágrafo único ou email HTML
+
+Internal:  estilo para página única/protótipo
+
+External: padrão profissional, escalável e com cache.  
+
+Prefira usar ID do que estilo inline.*/
+
+.menu a {
+    color: #1F3A4D;
+}
+
+body{
+    background-color: #F4F1EC;
+}
+
+/* Box-shadow moderno e suave para formulários e fieldsets */
+#livrosForm, #buscaForm, #listaLivrosFieldset {
+    box-shadow: 0 4px 12px rgba(31, 58, 77, 0.15);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    
+}
+
