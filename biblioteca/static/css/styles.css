@@ -16,9 +16,10 @@ body{
 
 /* Box-shadow moderno e suave para formulários e fieldsets */
 #livrosForm, #buscaForm, #listaLivrosFieldset {
-    box-shadow: 0 4px 12px rgba(31, 58, 77, 0.15);
+    box-shadow: 0 4px 12px rgba(31, 58, 77, 0.15), 0 -4px 12px rgba(31, 58, 77, 0.15);
     border-radius: 8px;
     padding: 20px;
+    margin-top: 20px;
     margin-bottom: 20px;
     
 }
