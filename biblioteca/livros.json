@@ -6,5 +6,229 @@
         "ano": 2013,
         "genero": "ficcao",
         "status": "leitura_em_andamento"
+    },
+    {
+        "id": 3,
+        "titulo": "1984",
+        "autor": "George Orwell",
+        "ano": 1949,
+        "genero": "distopia",
+        "status": "lido"
+    },
+    {
+        "id": 4,
+        "titulo": "O Hobbit",
+        "autor": "J.R.R. Tolkien",
+        "ano": 1937,
+        "genero": "fantasia",
+        "status": "lido"
+    },
+    {
+        "id": 5,
+        "titulo": "Orgulho e Preconceito",
+        "autor": "Jane Austen",
+        "ano": 1813,
+        "genero": "romance",
+        "status": "lido"
+    },
+    {
+        "id": 6,
+        "titulo": "O Grande Gatsby",
+        "autor": "F. Scott Fitzgerald",
+        "ano": 1925,
+        "genero": "romance_contemporaneo",
+        "status": "lido"
+    },
+    {
+        "id": 7,
+        "titulo": "Dom Casmurro",
+        "autor": "Machado de Assis",
+        "ano": 1899,
+        "genero": "romance_historico",
+        "status": "lido"
+    },
+    {
+        "id": 8,
+        "titulo": "Duna",
+        "autor": "Frank Herbert",
+        "ano": 1965,
+        "genero": "ficcao_cientifica",
+        "status": "leitura_nao_iniciada"
+    },
+    {
+        "id": 9,
+        "titulo": "Eu, Robô",
+        "autor": "Isaac Asimov",
+        "ano": 1950,
+        "genero": "ficcao_cientifica",
+        "status": "lido"
+    },
+    {
+        "id": 10,
+        "titulo": "O Código Da Vinci",
+        "autor": "Dan Brown",
+        "ano": 2003,
+        "genero": "thriller",
+        "status": "lido"
+    },
+    {
+        "id": 11,
+        "titulo": "O Iluminado",
+        "autor": "Stephen King",
+        "ano": 1977,
+        "genero": "terror",
+        "status": "leitura_em_andamento"
+    },
+    {
+        "id": 12,
+        "titulo": "Crepúsculo",
+        "autor": "Stephenie Meyer",
+        "ano": 2005,
+        "genero": "romance_fantasia",
+        "status": "lido"
+    },
+    {
+        "id": 13,
+        "titulo": "Harry Potter e a Pedra Filosofal",
+        "autor": "J.K. Rowling",
+        "ano": 1997,
+        "genero": "fantasia",
+        "status": "lido"
+    },
+    {
+        "id": 14,
+        "titulo": "Sapiens",
+        "autor": "Yuval Noah Harari",
+        "ano": 2011,
+        "genero": "historia",
+        "status": "leitura_em_andamento"
+    },
+    {
+        "id": 15,
+        "titulo": "A Revolução Francesa",
+        "autor": "Simon Schama",
+        "ano": 1989,
+        "genero": "historia",
+        "status": "leitura_nao_iniciada"
+    },
+    {
+        "id": 16,
+        "titulo": "O Alquimista",
+        "autor": "Paulo Coelho",
+        "ano": 1988,
+        "genero": "autoajuda",
+        "status": "lido"
+    },
+    {
+        "id": 17,
+        "titulo": "Meditações",
+        "autor": "Marco Aurélio",
+        "ano": 170,
+        "genero": "filosofia",
+        "status": "leitura_nao_iniciada"
+    },
+    {
+        "id": 18,
+        "titulo": "O Homem em Busca de Sentido",
+        "autor": "Viktor Frankl",
+        "ano": 1946,
+        "genero": "psicologia",
+        "status": "lido"
+    },
+    {
+        "id": 19,
+        "titulo": "O Poder do Hábito",
+        "autor": "Charles Duhigg",
+        "ano": 2012,
+        "genero": "desenvolvimento_pessoal",
+        "status": "leitura_em_andamento"
+    },
+    {
+        "id": 20,
+        "titulo": "Mindset",
+        "autor": "Carol Dweck",
+        "ano": 2006,
+        "genero": "psicologia",
+        "status": "lido"
+    },
+    {
+        "id": 21,
+        "titulo": "O Sétimo Selo",
+        "autor": "Ingmar Bergman",
+        "ano": 1957,
+        "genero": "drama",
+        "status": "nao_lido"
+    },
+    {
+        "id": 22,
+        "titulo": "Mistério na Catedral",
+        "autor": "Agatha Christie",
+        "ano": 1934,
+        "genero": "misterio",
+        "status": "lido"
+    },
+    {
+        "id": 23,
+        "titulo": "O Assassinato na Rua Morgue",
+        "autor": "Edgar Allan Poe",
+        "ano": 1841,
+        "genero": "policial",
+        "status": "lido"
+    },
+    {
+        "id": 24,
+        "titulo": "O Cortiço",
+        "autor": "Aluísio Azevedo",
+        "ano": 1890,
+        "genero": "drama",
+        "status": "leitura_nao_iniciada"
+    },
+    {
+        "id": 25,
+        "titulo": "Crime e Castigo",
+        "autor": "Fiódor Dostoiévski",
+        "ano": 1866,
+        "genero": "drama",
+        "status": "leitura_em_andamento"
+    },
+    {
+        "id": 26,
+        "titulo": "Anna Karenina",
+        "autor": "Lev Tolstói",
+        "ano": 1877,
+        "genero": "romance_historico",
+        "status": "leitura_nao_iniciada"
+    },
+    {
+        "id": 27,
+        "titulo": "O Retrato de Dorian Gray",
+        "autor": "Oscar Wilde",
+        "ano": 1890,
+        "genero": "fantasia_urbana",
+        "status": "lido"
+    },
+    {
+        "id": 28,
+        "titulo": "Histórias Extraordinárias",
+        "autor": "Edgar Allan Poe",
+        "ano": 1844,
+        "genero": "contos",
+        "status": "lido"
+    },
+    {
+        "id": 29,
+        "titulo": "Cem Anos de Solidão",
+        "autor": "Gabriel García Márquez",
+        "ano": 1967,
+        "genero": "realismo_magico",
+        "status": "leitura_em_andamento"
+    },
+    {
+        "id": 30,
+        "titulo": "A Máquina do Tempo",
+        "autor": "H.G. Wells",
+        "ano": 1895,
+        "genero": "ficcao_cientifica",
+        "status": "lido"
     }
 ]
