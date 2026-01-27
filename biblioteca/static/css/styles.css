@@ -6,21 +6,73 @@ External: padrão profissional, escalável e com cache.
 
 Prefira usar ID do que estilo inline.*/
 
-.menu a {
-    color: #1F3A4D;
+* {
+    box-sizing: border-box;
 }
 
 body{
-    background-color: #F4F1EC;
+    background-color: #fae7b3;
+    color: #3B2F2F;
+    font-family: 'Roboto', 'Lato', sans-serif;
+
 }
 
-/* Box-shadow moderno e suave para formulários e fieldsets */
-#livrosForm, #buscaForm, #listaLivrosFieldset {
+h1{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+legend {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.menu a {
+    color: #896a6a;
+    text-decoration: none;
+}
+
+a:hover {
+  color: #2f2525;
+}
+
+#livrosForm, #buscaForm, #livrosTable {
     box-shadow: 0 4px 12px rgba(31, 58, 77, 0.15), 0 -4px 12px rgba(31, 58, 77, 0.15);
     border-radius: 8px;
     padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
+    margin: 20px;
+    width: 100%;
+    max-width: 1250px;
 }
 
+#livrosTable {
+    text-align: center;
+}
+
+button{
+    margin: 20px;
+}
+
+.btn-editar,
+.btn-deletar {
+    min-width: 80px;
+    height: 32px;
+    padding: 4px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #896a6a;
+    cursor: pointer;
+}
+
+.btn-editar {
+    width: 40%;
+}
+
+.btn-deletar {
+    width: 40%;
+}
+
+
+footer{
+    text-align: center;
+}
