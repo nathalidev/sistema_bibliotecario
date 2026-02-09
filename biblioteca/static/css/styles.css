@@ -20,7 +20,6 @@ body{
 
 h1{
     font-size: 45px;
-    font-weight: bold;
     background-color: #3B2F2F;
     color: #fae7b3;
     margin: 0;
@@ -33,7 +32,6 @@ nav{
 
 legend {
     font-size: 35px;
-    font-weight: bold;
 }
 
 .menu a {
