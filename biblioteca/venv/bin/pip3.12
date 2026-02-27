@@ -1,4 +1,4 @@
-#!/home/nath/sistema_bibliotecario/biblioteca/venv/bin/python3
+#!/home/natha/biblioteca/sistema_bibliotecario/biblioteca/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
