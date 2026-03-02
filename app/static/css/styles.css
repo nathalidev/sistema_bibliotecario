@@ -1,0 +1,130 @@
+/* Inline: só para ajustes pontuais como um parágrafo único ou email HTML
+
+Internal:  estilo para página única/protótipo
+
+External: padrão profissional, escalável e com cache.  
+
+Prefira usar ID do que estilo inline.*/
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fae7b3;
+    color: #3B2F2F;
+    font-family: 'Roboto', 'Lato', sans-serif;
+    margin: 0;
+
+}
+
+h1{
+    font-size: 45px;
+    background-color: #3B2F2F;
+    color: #fae7b3;
+    margin: 0;
+    padding: 20px;
+}
+
+nav{
+    margin: 20px;
+}
+
+legend {
+    font-size: 35px;
+}
+
+.menu a {
+    color: #896a6a;
+    text-decoration: none;
+}
+
+a:hover {
+  color: #2f2525;
+}
+
+#livrosForm, #buscaForm, #livrosTable {
+    box-shadow: 0 4px 12px rgba(31, 58, 77, 0.15), 0 -4px 12px rgba(31, 58, 77, 0.15);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    max-width: 1250px;
+}
+
+#livrosTable {
+    text-align: center;
+    table-layout: fixed; /* fixa as larguras das colunas */
+}
+
+#livrosTable th,
+#livrosTable td {
+    padding: 5px 10px;  /* reduz altura das linhas */
+    overflow-wrap: break-word;
+}
+
+/* Largura específica para colunas (via colgroup) */
+#livrosTable col.col-ano {
+    width: 6%;
+}
+
+button{
+    margin: 20px;
+    background-color: #6b4f4f;
+    color: #fff;
+    border: 1px solid #4a3535;
+    border-radius: 6px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 5px 8px;
+
+}
+
+button:hover {
+    background-color: #5a3b3b;
+}
+
+button:active {
+    background-color: #4a2f2f;
+}
+
+.btn-editar,
+.btn-deletar {
+    margin: 5px 8px;
+}
+
+.btn-editar {
+    width: 35%;
+    background-color: #c27c2c;
+}
+
+.btn-deletar {
+    width: 35%;
+    background-color: #b84a3a;
+}
+
+.btn-editar:hover {
+    background-color: #a05f1e;
+}
+
+.btn-editar:active {
+    background-color: #8a4f17;
+}
+
+.btn-deletar:hover {
+    background-color: #9e3b2a;
+}
+
+.btn-deletar:active {
+    background-color: #873223;
+}
+
+.btn-cadastrar {
+    margin-left: 0;
+}
+
+
+footer{
+    text-align: center;
+}
