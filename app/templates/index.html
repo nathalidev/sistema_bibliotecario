@@ -31,22 +31,22 @@
             <fieldset>
                 <legend><strong>Cadastro de livros</strong></legend>
 
-                <label for="titulo">Título:</label>
+                <label for="titulo" class="form-label">Título:</label>
                 <input type="text" id="titulo" name="titulo" placeholder="Digite o Título..."/>
 
                 <br><br>
 
-                <label for="autor">Autor:</label>
+                <label for="autor" class="form-label">Autor:</label>
                 <input type="text" id="autor" name="autor" placeholder="Digite o Autor..."/>
 
                 <br><br>
 
-                <label for="ano">Ano de publicação:</label>
+                <label for="ano" class="form-label">Ano de publicação:</label>
                 <input type="number" id="ano" name="ano" min="1900" max="{{ ANO_ATUAL }}" />
 
                 <br><br>
 
-                <label for="genero">Gênero:</label>
+                <label for="genero" class="form-label">Gênero:</label>
                 <select id="genero" name="genero">
                     <option value=''>Selecione</option>
                     <option value="acao">Ação</option>
@@ -124,7 +124,7 @@
 
                 <br><br>
 
-                <label for="status_leitura">Status de leitura</label>
+                <label for="status_leitura" class="form-label">Status de leitura</label>
                 <select id="status_leitura" name="status_leitura">
                     <option value=''>Selecione</option>
                     <option value="leitura_nao_iniciada">Leitura não iniciada</option>
@@ -147,7 +147,7 @@
 
                 <hr>
 
-                <label for="metodo_de_busca">Selecione o filtro da sua busca:</label>
+                <label for="metodo_de_busca" class="form-label">Selecione o filtro da sua busca:</label>
                 <select id="metodo_de_busca" name="metodo_de_busca">
                     <option value=''>Selecione</option>
                     <option value="titulo">Título</option>
