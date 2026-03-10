@@ -10,10 +10,18 @@ Prefira usar ID do que estilo inline.*/
     box-sizing: border-box;
 }
 
+@font-face{
+    font-family: 'MinhaFonte';
+    src: url('../fonts/NadaQonitaPersonalUse.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body{
     background-color: #fae7b3;
     color: #3B2F2F;
-    font-family: 'Roboto', 'Lato', sans-serif;
+    font-family: 'MinhaFonte', 'Roboto', 'Lato', sans-serif;
     margin: 0;
 
 }
